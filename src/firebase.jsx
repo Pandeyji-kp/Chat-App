@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider, signInWithPopup, signOut } from "firebase/auth";
-import { getFirestore, collection, addDoc, query, orderBy, onSnapshot, serverTimestamp } from "firebase/firestore";
+import { getFirestore, collection, addDoc,getDocs, query, orderBy, onSnapshot, serverTimestamp } from "firebase/firestore";
 
 
 const firebaseConfig = {
@@ -20,4 +20,4 @@ const db = getFirestore(app);
 const signIn = () => signInWithPopup(auth, provider);
 const logOut = () => signOut(auth);
 
-export { auth, db, signIn, logOut, collection, addDoc, query, orderBy, onSnapshot, serverTimestamp };
+export { auth, db, signIn, logOut, collection, addDoc, query, orderBy, onSnapshot, serverTimestamp ,getDocs};
